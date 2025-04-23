@@ -1,0 +1,15 @@
+# Copyright (C) 2017 The Chromium Authors. All rights reserved.
+# Use of this source code is governed by a BSD-style license that can be
+# found in the LICENSE file.
+
+dir.system=/system
+dir.system=/data
+
+[system]
+namespace.default.isolated = false
+namespace.default.search.paths = /system/${LIB}/arm
+namespace.default.permitted.paths = /system/${LIB}/arm
+
+namespace.default.asan.search.paths = /data/asan/system/${LIB}/arm:/system/${LIB}/arm
+namespace.default.asan.permitted.paths = /data/asan/system/${LIB}/arm:/system/${LIB}/arm
+
